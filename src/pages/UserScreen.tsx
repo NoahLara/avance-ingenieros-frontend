@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { DefaultResponse, UserInteface } from '../interfaces';
+import { Link } from 'react-router-dom';
 
 function UserScreen() {
   const apiURL = 'http://localhost:3000/users';
@@ -48,6 +49,9 @@ function UserScreen() {
   return (
     <div>
       <h2>Usuarios</h2>
+      <Link to="/create-user">
+        <button>Crear Usuario</button>
+      </Link>
       <table>
         <thead>
           <tr>
